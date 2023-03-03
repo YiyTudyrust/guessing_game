@@ -1,10 +1,10 @@
-use std::io;
-use rand::Rng;
-use std::cmp::Ordering;
+use std::io; // это библиотека для ввода и вывода данных
+use rand::Rng; // эта библиотека для генерации чисел от 1 до 100
+use std::cmp::Ordering; // это библиотека для сравнение цифр
 
 fn main () {
     let name = String::from("Guessing game");
-    let secret_number:u8 = rand::thread_rng().gen_range(1, 101);
+    let secret_number:u8 = rand::thread_rng().gen_range(1..=100); // генерируется число от 1 до 100
 
     loop {
         println!("Hay, welcome to {name}. This is guessing game.");
