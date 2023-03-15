@@ -5,9 +5,9 @@ use std::cmp::Ordering; // это библиотека для сравнение
 fn main () {
     let name = String::from("Guessing game");
     let secret_number:u8 = rand::thread_rng().gen_range(1..=100); // генерируется число от 1 до 100
-
+    println!("Hay, welcome to {name}. This is guessing game.");
     loop {
-        println!("Hay, welcome to {name}. This is guessing game.");
+
         println!("Please input your guess.");
 
         let mut guess = String::new();
